@@ -1,0 +1,137 @@
+* {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+body{
+  padding: 3px 3px 3px 3px;
+
+  background-color: #D8DBE2;
+
+  font-family: Monospace;
+  font-size: 10pt;
+  text-align: center;
+}
+
+main {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 7fr;
+  grid-template-rows: auto;
+  grid-template-areas:  "header header"
+                        "nav main";
+  grid-gap: 3px 3px;
+  justify-items: stretch;
+  align-items: stretch;
+
+  width: 65%;
+
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4px;
+
+  border-width: 2px;
+  border-color: #212738;
+  border-style: solid;
+
+  background-color: #FFFFFF;
+
+  text-align: left;
+}
+
+header {
+  grid-area: header;
+  text-align: center;
+}
+
+header > #encrypt {
+  color: white;
+}
+
+nav {
+  grid-area: nav;
+}
+
+nav.content_section_text {
+  
+}
+
+article {
+  grid-area: main;
+  
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-auto-flow: row;
+}
+
+div.content_section_text {
+  margin: 4px;
+  padding: 8px;
+  
+  border-width: 1px;
+  border-style: dotted;
+  border-color: #000000;
+  background-color: #F5F6F7;
+
+  color: #000000;
+  font-size: 100%;
+
+  font-style: italic;
+}
+
+div.content_section_text a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+div.content_section_text a:link,
+div.content_section_text a:visited,
+ div.content_section_text a:active {
+  background-color: #DCDFE6;
+
+  color: #000000;
+}
+
+div.content_section_text a:hover {
+  background-color: #000000;
+
+  color: #DCDFE6;
+}
+
+div.section_header {
+  margin: 0px 0px 0px 0px;
+  padding: 3px 6px 3px 6px;
+
+  background-color: #8E9CB2;
+
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 112%;
+  text-align: center;
+
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+}
+
+div.section_header_red {
+  background-color: #CD214F;
+}
+
+div.section_header_grey {
+  background-color: #9F9386;
+}
+
+@media (max-width: 1510px) {
+main {
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-auto-flow: row;
+  grid-template-areas:  "header"
+                        "nav"
+                        "main";
+  width: auto;
+}
+
+}
